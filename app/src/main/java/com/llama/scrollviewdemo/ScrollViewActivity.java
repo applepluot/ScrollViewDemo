@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 public class ScrollViewActivity extends Activity {
@@ -14,6 +15,7 @@ public class ScrollViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll_view);
         WebView webview = (WebView) findViewById(R.id.web_view);
+        webview.setWebViewClient(new WebViewClient());
         webview.loadUrl("http://www.thinkful.com/");
     }
 
